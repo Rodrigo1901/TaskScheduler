@@ -1,0 +1,60 @@
+﻿@model Tarefa
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Deletar</h1>
+
+<div>
+    <h4>Informação da Tarefa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.Titulo)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.Descricao)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.Data)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Hora_Inicial)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.Hora_Inicial)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Hora_Final)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.Hora_Final)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Prioridade)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.Prioridade)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Finalizada)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.Finalizada)
+        </dt>
+    </dl>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Deletar" class="btn btn-danger"/>
+        <a asp-action="Index">Voltar a lista</a>
+    </form>
+</div>
